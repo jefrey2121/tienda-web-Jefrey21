@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Poppins:wght@400;500;600&display=swap');
+
+
+/* CSS General */
+
+:root {
+    --header-height: 3.5rem;
+  
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsl(140, 40%, 48%);
+    --first-color-alt: hsl(140, 40%, 44%);
+    --title-color: hsl(140, 4%, 12%);
+    --text-color: hsl(140, 2%, 24%);
+    --text-color-light: hsl(140, 4%, 64%);
+    --white-color: hsl(0, 0%, 100%);
+    --body-color: hsl(0, 0%, 100%);
+    --container-color: hsl(0, 0%, 95%);
+    --shadow-img: drop-shadow(0 8px 12px hsla(0, 0%, 0%, .2));
+    --filter-img: invert(1);
+  
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Poppins", sans-serif;
+    --second-font: "Cherry Bomb One", cursive;
+    --biggest-font-size: 3rem;
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+  
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  
+  /*========== Responsive typography ==========*/
+  @media screen and (min-width: 1150px) {
+    :root {
+      --biggest-font-size: 5.5rem;
+      --big-font-size: 3rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+    }
+  }
+
+  /* CSS General */
+
+.header_login{
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--body-color);
+    z-index: var(--z-fixed);
+    transition: box-shadow .4s, background-color .4s;
+    padding: 20px 0;
+}
+.enca{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login_logo{
+    display: flex;
+    align-items: center;
+    color: var(--tittle-color);
+    font-family: var(--second-font);
+    font-size: var(--h3-font-size);
+    column-gap: .25rem;
+    position: relative;
+    top: -2rem;
+    right: -5rem;
+}
+
+.login_logo img{
+    width: 2.50rem;
+}
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    padding: 10px 20px;
+    text-align: center;
+    flex-direction: row;
+    top: -40px;
+    position: relative;
+}
+
+.nav-item {
+    font-size: var(--font-regular);
+    font-family: var(--second-font);
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    
+    
+}
+
+.nav-link {
+    color: #fefefe;
+    font-family: var(--second-font);
+    border-radius: 10px;
+    padding: 8px;
+    box-shadow: 0 8px 24px hsla(140, 40%, 48%, .3);
+    background-color: var(--first-color);
+}
+.red_re{
+    background-color: rgb(203, 53, 53);
+    box-shadow: 0 8px 24px hsla(0, 76%, 59%, 0.3)
+}
+.button__ini{
+    background-color: var(--first-color);
+    padding: 0.30rem 1.10rem;
+    border-radius: 4rem;
+    color: var(--white-color);
+    font-weight: var(--font-regular);
+    transition: box-shadow .4s;
+    cursor: pointer;
+    position: relative;
+}
+.button__ini:hover{
+    box-shadow: 0 8px 24px hsla(140, 40%, 48%, .3);
+}
+
+
+/* //////////LOGIN//////////7 */
+.text-md-end{
+    padding: 10px;
+}
+.row{
+    padding: 10px 2px 20px 2px;
+}
+.card{
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px hsla(140, 77%, 15%, 0.598);
+    background-color: var(--first-color);
+    padding: 30px 30px 30px 30px;
+    border-radius: 30px;
+    position: relative;
+    top: -50px;
+    font-family: var(--second-font);
+    font-size: var(--h3-font-size);   
+}
+.logi{
+    color: #fefefe;
+}
+.remenberC{
+    font-size: var(--font-regular);
+}
+
+
+
+.form-control{
+    max-width: 201px;
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 7px 0 rgba(0, 0, 0, 0.681);
+    outline: none;
+    
+}
+.form-control:invalid{
+    animation: justshake 0.3s forwards;
+    color: rgb(99, 238, 12);
+  
+}
+.btn-primary {
+    position: relative;
+    width: 100%;
+    border: 2px solid #676a64;
+    background-color: #0b3107fd;
+    height: 40px;
+    color: rgb(255, 254, 254);
+    font-size: .8em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    margin: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.btn-primary::after{
+    content: "";
+    position: absolute;
+    background-color: rgba(78, 13, 13, 0.493);
+    height: 100%;
+    width: 150px;
+    top: 0;
+    left: -200px;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+    filter: blur(10px);
+    transition-duration: .5s;
+}
+.btn-primary:hover::after {
+    transform: translateX(600px);
+  transition-duration: .5s;
+}
+
+.btn-link {
+    z-index: 2;
+    font-size: 1em;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    position: sticky;
+    top: 22rem;
+    right: 0;
+    left: 0;
+    display: contents;
+}
+
+.btn-link:hover {
+    color: #f12d0ab7;
+}
+
+.form-check-input {
+    margin-top: 0.25rem;
+}
+
+
+
+/*////////////////REGISTER//////////////*/
+.contenedor{
+    margin-inline: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+.register_card{
+    padding: 10px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(203, 53, 53);
+    box-shadow: 0 8px 24px hsla(0, 81%, 19%, 0.463);
+    border-radius: 30px;
+    position: relative;
+    top: -50px;
+    align-content: stretch;
+    justify-items: center;
+    font-family: var(--second-font);
+    font-size: var(--h3-font-size);
+    color: var(--white-color);   
+}
+.register{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+
+
+
+
+/*======BREAKPOINTS=========*/
+/*para sitios cortos*/
+@media screen and (min-width: 576px) {
+    .card{
+        right: -3rem;
+    }
+    .register_card{
+        right: 3rem;
+    }
+   .button__ini{
+    left: -90px;
+   }
+   .contenedor{
+    justify-content: flex-end;
+    
+   }
+}
+@media screen and (min-width: 768px){
+    .card{
+        right: -6rem;
+    }
+    .register_card{
+        right: 6rem;
+    }
+   .button__ini{
+    left: -13rem;
+   }
+}
+@media screen and (min-width:1150px){
+    .card{
+        right: -12rem;
+    }
+    .register_card{
+        right: 16rem;
+    }
+   .button__ini{
+    left: -15rem;
+   }
+}
