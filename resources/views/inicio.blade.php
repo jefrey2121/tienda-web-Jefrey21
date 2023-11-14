@@ -1,59 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcup icon" href="img/logo.png">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
-    <title>Jefrey21</title>
-</head>
-<body>
-<header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav__logo">
-                <img src="img/logo.png" alt="">Jefrey21</a>
-                <div class="nav__menu" id="nav-menu">
-                       <ul class="nav__list">
-                        <li class="nav__item">
-                            <!-- Buscador -->
-                            <div class="search-container container">
-                                <input type="text" class="search-input" placeholder="Buscar...">
-                                <button class="search-button">Buscar</button>
-                            </div>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#home1" class="nav__link active-link">Inicio</a>
-                        </li>
-                        <a href="#popular" class="nav__link">Popular</a>
-                    </li>
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">Nosotros</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="{{route('login')}}" class="nav__link"><i class="ri-user-line"></i></a>
-                        </li>
-                        
-                       </ul> 
-                       <div class="nav__close" id="nav-close">
-                        <i class="ri-close-line"></i>
-                       </div>
-                       <img src="img/mariposa.png" alt="" class="nav__img-1">
-                       <img src="img/mariposa.png" alt="" class="nav__img-2"> 
-                </div> 
-                <div class="nav__buttons">
-                    <i class="ri-moon-line change-theme" id="theme-button"></i>
-
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="ri-apps-fill"></i>
-                    </div>
-                </div>
-            </a>
-        </nav>
-</header>
+@include('plantilla.navegacion')
     <main class="main">
-        <section class="home section" id="home1">
-
+        <section class="home section" id="home">
             <div class="home__container container grid">
                 <div class="home__data">
                 <h1 class="home__tittle">
@@ -63,8 +10,8 @@
                 </h1>
                 <p class="homme__description">
                     Obten lo ultimo en moda,
-                    tenemos las mejores ropas para grandes 
-                    y chicos con un precio economico.
+                    tenemos las mejores ropas con los mejores
+                    precios.
                 </p>
                 <a href="" class="button">COMPRA YA</a>
                 <img src="img/mariposa.png" alt="image" class="home__fruit">
@@ -108,8 +55,6 @@
                         <span class="enjoy_subtittle">Para los engreidos</span>
                     </a>
                 </article>
-            
-                
             </div>
         </section>
        
@@ -230,81 +175,7 @@
         </section>
     </main> 
 
-    <footer class="footer">
-        <div class="footer__container container grid">
-            <div>
-            <a href="#" class="footer__logo">
-                <img src="img/logo.png" alt="">Jefrey21
-            </a>
-            <p class="footer__description">
-                Lo ultimo en moda <br>
-                con las mejores ropas.
-            </p>
-            </div>
-
-        <div class="footer__data grid">
-            <div>
-                <h3 class="footer__title">Compania</h3>
-                <ul class="footer__links">
-                    <li>
-                        <a href="#" class="footer__link">FAQS</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__link">Sobre nosotros</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__link">Contactanos</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="footer__title">New</h3>
-                <ul class="footer__links">
-                    <li>
-                        <a href="#" class="footer__link">Caracteristicas</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__link">Testimonial</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__link">Videos</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="footer__title">Direccion</h3>
-                <ul class="footer__links">
-                    <li class="footer__info">
-                        Av.Amazonas 2121 <br>
-                        Puccallpa 4321, Perú
-                    </li>
-                    <li class="footer__info">
-                        9AM - 10PM
-                    </li>
-                </ul>
-            </div>
-                <div>
-                    <h3 class="footer__title">Redes sociales</h3>
-                    <div class="footer__social">
-                        <a href="https://web.facebook.com/jeffersonandres.chotarodriguez" target="_blank" class="footer__social-link">
-                            <i class="ri-facebook-circle-line"></i>
-                        </a>
-                        <a href="https://www.instagram.com/jeffersonchrodriguez/" target="_blank" class="footer__social-link">
-                            <i class="ri-instagram-line"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <img src="img/polera.png" alt="image" class="footer__fruit">
-            <img src="img/branch-1.png" alt="image" class="footer__branch-1">
-            <img src="img/branch-2.png" alt="image" class="footer__branch-2">
-        </div>
-
-        <span class="footer__copy">
-            &#169; Todo los derechos reservados por Jefrey21
-        </span>
-    </footer>
+    @include('plantilla.footer')
     <!-- SCROLL UP -->
     <a href="#" class="scrollup" id="scroll-up">
         <i class="ri-arrow-up-s-line"></i>

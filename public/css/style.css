@@ -197,33 +197,33 @@ body.dark-theme{
 /* ========Barra de busqueda */
 .search-container {
     display: flex;
-    max-width: 500px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-    
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column-reverse;
+    position: relative;
 }
 
-.search-input {
-    flex: 1;
-    padding: 5px;
-    font-size: 15px;
-    background-color: var(--body-color);
-    color: var(--text-color-light);
-}
-
-.search-button {
-    background-color:var(--title-color);
+.input__search {
+    width: 15rem;
+    background-color: #f5f5f5;
+    color: var(--tittle-color);
+    padding: .15rem .5rem;
+    min-height: 40px;
+    border-radius: 4px;
+    outline: none;
     border: none;
-    color: #fff;
-    font-size: 12px;
-    cursor: pointer;
-    padding: 5px 15px;
-}
-
-.search-button:hover {
-    background-color: rgb(53, 130, 32);
-}
+    line-height: 1.15;
+    box-shadow: 0px 10px 20px -18px;
+  }
+  
+  .input__search:focus {
+    border-bottom: 2px solid var(--tittle-color);
+    border-radius: 4px 4px 2px 2px;
+  }
+  
+  .input__search:hover {
+    outline: 1px solid lightgrey;
+  }
 /* ====== para moviles ===== */
 @media screen and (max-width: 1150px){
     .nav__menu{
@@ -277,6 +277,7 @@ body.dark-theme{
 .show-menu{
     top: 0;
 }
+
 /*=========agregar sombra al header=====*/
 .shadow-header{
     box-shadow: 0 2px 16px hsla(0, 0%, 0%, .1);
@@ -595,6 +596,7 @@ body.dark-theme{
 }
 /*=============FOOTER============*/
 .footer{
+    background: var(--body-color);
     padding-block: 3rem 2rem;
     overflow: hidden;
 }
@@ -612,7 +614,7 @@ body.dark-theme{
     margin-bottom: 1rem;
 }
 .footer__logo img{
-    width: 1.25rem; 
+    width: 2.25rem; 
 }
 .footer__data{
     display: grid;
@@ -810,10 +812,10 @@ body.dark-theme{
     }
     .nav {
         height: calc(var(--header-height) + 2rem);
-        column-gap: 4rem;
+        column-gap: 2rem;
     }
     .nav__logo img{
-        width: 4.25rem;
+        width: 2.25rem;
     }
     
     .nav__close,
@@ -827,8 +829,35 @@ body.dark-theme{
     }
     .nav__list{
         flex-direction: row;
-        column-gap: 4rem;
+        column-gap: 3rem;
+        position: relative;
+        top: 8px;
     }
+    /*Buscardor*/
+    
+    .input__search{
+        width: 25rem;
+        max-width: 50rem; 
+        flex-grow: 1;
+    }
+
+    /* ===========Ventana emergente========== */
+    .ventana-emergente {
+    position: absolute;
+    background-color: var(--body-color);
+    border: 2px solid var(--text-color);
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 8px 24px hsla(0, 0%, 98%, 0.152);
+    padding: 10px 10px 10px;
+    }
+
+    .ventana-emergente a {
+    text-decoration: none;
+    padding: 5px 5px 5px;
+    color: var(--text-color);
+    }
+
     .dark-theme .nav__menu{
         box-shadow: none;
     }

@@ -70,4 +70,5 @@
     </div>
 </div>
 <script src="js/scrollreveal.min.js"></script>
+    <script src="js/main.js"></script>
 @endsection

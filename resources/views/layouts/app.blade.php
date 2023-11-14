@@ -81,7 +81,7 @@
             @yield('content')
         </main>
     </div>
-    <script src="js/scrollreveal.min.js"></script>
+    @include('plantilla.footer')
     <script src="js/tema.js"></script>
 </body>
 </html>

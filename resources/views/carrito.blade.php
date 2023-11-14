@@ -1,4 +1,4 @@
-@include('userhome')
+@include('plantilla.navegacion')
         <section class="popular section" id="carrito">
             <h2 class="section__title">
                 Tu colecion
@@ -11,7 +11,7 @@
                     <span class="popular__subtitle">Gucci</span>
                     <h3 class="popular__price">S/40.99</h3>
                     <button class="popular__button button">
-                        <i class="ri-add-line"></i>
+                    <i class="ri-shopping-cart-line"></i>
                     </button>
                 </article>
                 <article class="popular__card">
@@ -21,7 +21,7 @@
                     <span class="popular__subtitle">Zara</span>
                     <h3 class="popular__price">S/40.99</h3>
                     <button class="popular__button button">
-                        <i class="ri-add-line"></i>
+                    <i class="ri-shopping-cart-line"></i>
                     </button>
                 </article>
                 <article class="popular__card">
@@ -31,7 +31,7 @@
                     <span class="popular__subtitle">Zara</span>
                     <h3 class="popular__price">S/40.99</h3>
                     <button class="popular__button button">
-                        <i class="ri-add-line"></i>
+                    <i class="ri-shopping-cart-line"></i>
                     </button>
                 </article>
             </article>
@@ -42,7 +42,7 @@
                 <span class="popular__subtitle">Zara</span>
                 <h3 class="popular__price">S/40.99</h3>
                 <button class="popular__button button">
-                    <i class="ri-add-line"></i>
+                <i class="ri-shopping-cart-line"></i>
                 </button>
             </article>
         </article>
@@ -53,7 +53,7 @@
             <span class="popular__subtitle">Zara</span>
             <h3 class="popular__price">S/40.99</h3>
             <button class="popular__button button">
-                <i class="ri-add-line"></i>
+            <i class="ri-shopping-cart-line"></i>
             </button>
         </article>
     </article>
@@ -64,9 +64,14 @@
         <span class="popular__subtitle">Zara</span>
         <h3 class="popular__price">S/40.99</h3>
         <button class="popular__button button">
-            <i class="ri-add-line"></i>
+        <i class="ri-shopping-cart-line"></i>
         </button>
     </article>
             </div>
         </section>
 
+ @include('plantilla.footer')
+ <script src="js/scrollreveal.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/tema.js"></script>
