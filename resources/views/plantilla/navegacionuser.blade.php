@@ -23,7 +23,7 @@
                             </div>
                         </li>
                         <li class="nav__item">
-                                <a href="{{ route('userhome') }}" class="nav__link active-link">Inicio</a>
+                                <a href="{{ route('administrador') }}" class="nav__link active-link">Inicio</a>
                         </li>
                         <li class="nav__item">
                             <a href="#popular" class="nav__link">Popular</a>

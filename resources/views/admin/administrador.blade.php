@@ -14,7 +14,7 @@
 <body class="p-3 m-0 border-0 bd-example m-0 border-0">    
     <nav class="navbar navbar-dark bg-dark fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand tittle" href="#">Administrador</a>
+        <a class="navbar-brand tittle" >Administrador</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -30,17 +30,18 @@
           <div class="offcanvas-body menu_container">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"></a>
+                <a class="nav-link active" aria-current="page" href="{{ route('administrador') }}">
+                <i class="ri-home-2-line"></i>Inicio</a>
               </li>
               <li class="nav-item dropdown">
+              
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="ri-store-2-line icon_menu"></i>Almacen
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item" href="{{ route('articulos') }}">
-                </i>Artirculos</a></li>
-                       <hr class="dropdown-divider">
-                  <li><a class="dropdown-item" href="{{ route('categoria') }}">categoria</a></li>
+                <li><a class="dropdown-item" href="{{ route('prendas.index') }}">Articulos</a></li>
+                <hr class="dropdown-divider">
+                <li><a class="dropdown-item" href="{{ route('categorias.index') }}">categoria</a></li>
                   <li>
                     
                   </li>
@@ -70,14 +71,21 @@
                   </li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{ route('subs') }}">
-                <i class="ri-mail-send-line icon_menu"></i>Subscripciones</a>
-              </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{{ route('subs.index') }}">
+                  <i class="ri-mail-send-line icon_menu"></i>Subscripciones
+                </a>
+                </li> 
               <br>
-              <li class="nav-item">
-                <a class="nav-link" href="{{ route('inicio') }}">
-                <i class="ri-door-open-fill icon_menu"></i>Cerrar seción</a>
+              <li class="nav__item" id="usuarioItem">
+                   @auth
+                 <a href="{{ route('logout') }}" class="nav__link close_sesion" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                   <i class="ri-door-open-fill icon_menu"></i>Cerrar sesión
+                 </a>
+                 <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                    @csrf
+                  </form>
+                @endauth
               </li>
             </ul>
           </div>

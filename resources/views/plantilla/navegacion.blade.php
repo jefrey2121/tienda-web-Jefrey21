@@ -22,7 +22,7 @@
                         </div>
                         </li>
                         <li class="nav__item">
-                                <a href="{{ route('administrador') }}" class="nav__link active-link">Inicio</a>
+                                <a href="{{ route('inicio') }}" class="nav__link active-link">Inicio</a>
                         </li>
                         <li class="nav__item">
                             <a href="#popular" class="nav__link">Popular</a>
@@ -36,6 +36,7 @@
                         <li class="nav__item">
                             <a href="{{route('login')}}" class="nav__link"><i class="ri-user-line"></i></a>
                         </li>
+                        
                        </ul> 
                        <div class="nav__close" id="nav-close">
                         <i class="ri-close-line"></i>
