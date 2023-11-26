@@ -12,9 +12,13 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="p-3 m-0 border-0 bd-example m-0 border-0">    
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand tittle" >Administrador</a>
+    <nav class="navbar  navbar-dark bg-dark fixed-top">
+      <div class="shadow-lg container-fluid">
+        
+      <a class="navbar-brand" href="#">
+      <img src="{{asset('img/logo.png')}}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      Jefrey21
+    </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -41,7 +45,7 @@
                 <ul class="dropdown-menu dropdown-menu-dark">
                 <li><a class="dropdown-item" href="{{ route('prendas.index') }}">Articulos</a></li>
                 <hr class="dropdown-divider">
-                <li><a class="dropdown-item" href="{{ route('categorias.index') }}">categoria</a></li>
+                <li><a class="dropdown-item" href="{{ url('categoria') }}">categoria</a></li>
                   <li>
                     
                   </li>
@@ -54,7 +58,7 @@
                 <ul class="dropdown-menu dropdown-menu-dark">
                   <li><a class="dropdown-item" href="{{ route('ingresos') }}">Ingresos </a></li>
                        <hr class="dropdown-divider">
-                  <li><a class="dropdown-item" href="{{ route('proveedores') }}">Proveedores</a></li>
+                  <li><a class="dropdown-item" href="{{ url('proveedores') }}">Proveedores</a></li>
                   <li>
                   </li>
                 </ul>

@@ -20,7 +20,6 @@
                     <th scope="row">{{ $key + 1 }}</th>
                     <td>{{ $subscripcion->correo }}</td>
                     <td>
-                        <!-- Botón de copiar al portapapeles -->
                         <button class="btn btn-sm btn-primary btn-copy" data-clipboard-text="{{ $subscripcion->correo }}">
                             Copiar
                         </button>
@@ -38,7 +37,12 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Inicializa Clipboard.js
-        var clipboard = new ClipboardJS('.btn-copy');
+        var clipboard = new ClipboardJS('.btn-copy', {
+            // Configura el evento de clic para seleccionar el texto dinámicamente
+            text: function(trigger) {
+                return trigger.getAttribute('data-clipboard-text');
+            }
+        });
 
         // Evento cuando se copia al portapapeles
         clipboard.on('success', function(e) {

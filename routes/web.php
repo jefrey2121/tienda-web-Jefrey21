@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\PrendasController;
+use App\Http\Controllers\ProveedoresController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SubscripcionesController;
 
@@ -20,19 +21,21 @@ Route::get('/userhome', [App\Http\Controllers\HomeController::class, 'index'])->
 
 Route::view('/administrador', 'admin.administrador')->name('administrador'); //en caso que este en una carpeta usar el punto .
 
-
-Route::view('/prendas','admin.menu.Articulos')->name('prendas');
-Route::get('/prendas', [PrendasController::class, 'index'])->name('prendas.index');
-
+//Articulos
+Route::resource('prendas',App\Http\Controllers\PrendasController::class);
 
 
-Route::view('/categoria','admin.menu.categoria')->name('categorias');
-Route::get('/categoria', [CategoriaController::class, 'index'])->name('categorias.index');
+//categoeria
+Route::resource('categoria',App\Http\Controllers\CategoriaController::class);
+
 
 
 Route::view('/clientes','admin.menu.clientes')->name('clientes');
 Route::view('/ingresos','admin.menu.ingresos')->name('ingresos');
-Route::view('/proveedores','admin.menu.proveedores')->name('proveedores');
+
+//Proveedores
+
+Route::resource('proveedores',App\Http\Controllers\ProveedoresController::class);
 
 ///subs
 Route::view('/subs','admin.menu.subs')->name('subs');

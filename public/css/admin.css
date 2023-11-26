@@ -51,7 +51,9 @@
       --small-font-size: .875rem;
     }
   }
-
+.title{
+  color: white;
+}
 .tittle{
   font-size: var(--h1-font-size);
 }
